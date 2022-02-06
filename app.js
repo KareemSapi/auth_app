@@ -12,7 +12,7 @@ const app = express();
 require('./config/passport')(passport);
 
 //DB config
-var mongoDB = 'mongodb+srv://kSapi:spdC-6*nmzuW-cd@cluster0.revcx.mongodb.net/auth_app?retryWrites=true&w=majority';
+var mongoDB = `CONNECT_TO_DB`;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
